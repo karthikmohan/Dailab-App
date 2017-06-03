@@ -1,0 +1,55 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/layout_root"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:background="@drawable/border1">
+
+        <ImageView android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/star_one"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"/>
+
+        <ImageView android:id="@+id/image1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/star_two"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"/>
+
+        <TextView android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="Hello"
+            android:layout_margin="5dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/flyer"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            android:autoLink="web"
+            android:gravity="center"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:id="@+id/button"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:background="@drawable/border" />
+    </LinearLayout>
+</ScrollView>
