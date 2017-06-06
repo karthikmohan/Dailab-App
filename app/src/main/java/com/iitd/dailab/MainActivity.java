@@ -289,14 +289,19 @@ public class MainActivity extends AppCompatActivity
             nav_userpic = (CircleImageView) hView.findViewById(R.id.profile_image);
             try {
                 if (user.isAnonymous()) {
-                    nav_user.setText("Hello!");
-                    nav_email.setText("Welcome.");
+                    nav_user.setText("Welcome to DAILAB");
+                    nav_email.setText("DBT & AIST have established a new joint research laboratory, named DBT-AIST International Laboratory for Advanced Biomedicine (DAILAB) at AIST Tsukuba and RCB, India.");
                 } else {
                     nav_user.setText(name);
                     nav_email.setText(email);
                     System.out.println(photo);
-                    if(photo!=null)
+                    if(photo!=null) {
                         Glide.with(this).load(photo).into(nav_userpic);
+                    }
+                    else
+                    {
+                        nav_userpic.setVisibility(View.GONE);
+                    }
 
                 }
             } catch (Exception ignored) {
@@ -390,7 +395,11 @@ public class MainActivity extends AppCompatActivity
 
         }
         else if (id == R.id.nav_sisters) {
-
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            intent.setData(Uri.parse("http://web.iitd.ac.in/~sundar/dailab/PDFs/DAILAB-SISTERs.pdf"));
+            startActivity(intent);
         }
         else if (id == R.id.nav_newsletters) {
             startActivity(new Intent(MainActivity.this, RecyclerViewFragment3.class));

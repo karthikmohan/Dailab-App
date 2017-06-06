@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/backred">
+        android:background="@color/blue">
 
         <!--<android.support.v4.view.ViewPager-->
         <!--android:layout_width="match_parent"-->
@@ -22,13 +22,14 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical|center_horizontal|center">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:src="@drawable/logo" />
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:src="@drawable/banner" />
         </LinearLayout>
 
 
@@ -82,31 +83,29 @@
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <TextView
+        <ImageView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/linearLayout"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:text="Preface"
+            android:layout_height="45dp"
             android:textAlignment="center"
             android:textColor="@android:color/white"
+            android:src="@drawable/logo"
+            android:layout_margin="15dp"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="75dp"
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:text="You should be logged in to chat with the DAILAB Executives. If you are only here to know about DAILAB and it's activites, then you can continue without login."
+            android:text="DBT and AIST have established a new joint research laboratory, named DBT-AIST International Laboratory for Advanced Biomedicine (DAILAB) at AIST Tsukuba and RCB, India."
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="16sp"

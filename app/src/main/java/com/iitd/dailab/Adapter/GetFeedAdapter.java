@@ -69,7 +69,7 @@ public class GetFeedAdapter extends RecyclerView.Adapter<GetFeedAdapter.MyViewHo
         }
         else
         {
-            holder.backcolor.setBackgroundColor(activity.getResources().getColor(R.color.colorPrimaryDark));
+            holder.backcolor.setBackgroundColor(activity.getResources().getColor(R.color.matcolor));
             holder.date.setVisibility(View.VISIBLE);
             holder.title.setGravity(Gravity.START);
         }

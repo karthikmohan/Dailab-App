@@ -197,7 +197,7 @@ public class TestRecyclerViewAdapter1 extends RecyclerView.Adapter<TestRecyclerV
             viewHolder.tvMovie1.setVisibility(View.VISIBLE);
         }
         if (i == 2||i==9||i==11||i==16) {
-            viewHolder.card.setBackgroundColor(Color.parseColor("#3949AB"));
+            viewHolder.card.setBackgroundColor(Color.parseColor("#607D8B"));
             viewHolder.tvMovie.setTextColor(Color.WHITE);
             viewHolder.card.setVisibility(View.VISIBLE);
             viewHolder.tvMovie.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, R.drawable.down1);
@@ -277,7 +277,7 @@ public class TestRecyclerViewAdapter1 extends RecyclerView.Adapter<TestRecyclerV
                 @Override
                 public void onClick(final View v) {
 
-                    if (feed.getName().equals("Introduction")) {
+                    if (feed.getName().equals("DAILAB @ IIT Delhi")) {
                         if (show) {
                             show = false;
                             notifyDataSetChanged();
