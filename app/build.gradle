@@ -76,6 +76,7 @@ dependencies {
     compile 'com.github.lzyzsd.randomcolor:library:1.0.0'
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
     compile 'com.github.barteksc:android-pdf-viewer:2.5.1'
+    compile 'org.jsoup:jsoup:1.10.2'
     testCompile 'junit:junit:4.12'
 
 

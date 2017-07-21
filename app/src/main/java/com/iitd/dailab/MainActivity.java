@@ -50,12 +50,16 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, GoogleApiClient.OnConnectionFailedListener {
 
 
+    private static final String CUSTOM_NAME = "MainActivity@AIST";
+    private static final String CUSTOM_NAME1 = "MainActivity@IITD";
+    private static final String CUSTOM_NAME2 = "MainActivity@Programs";
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
     private String photo;
     CircleImageView nav_userpic;
     private FragmentTransaction ft;
     private boolean doubleBackToExitPressedOnce;
+    private int pos = 0;
 
 
     @Override
@@ -84,6 +88,23 @@ public class MainActivity extends AppCompatActivity
                 startActivity(i);
             }}
 
+            if (CUSTOM_NAME.equals(getIntent().getAction())) {
+                // do Fragment transactions here
+                pos = 1;
+            }
+            else if (CUSTOM_NAME1.equals(getIntent().getAction())) {
+                // do Fragment transactions here
+                pos = 2;
+            }
+        else if (CUSTOM_NAME2.equals(getIntent().getAction())) {
+            // do Fragment transactions here
+            pos = 3;
+        }
+        else
+            {
+                pos  = 0;
+            }
+
         init();
         initUI();
     }
@@ -108,10 +129,9 @@ public class MainActivity extends AppCompatActivity
             }
 
             @Override
-            public Object instantiateItem(final ViewGroup container, final int position) {
+            public Object instantiateItem(final ViewGroup container, int position) {
                 View view;
-                if(position==0)
-                {
+                if (position == 0) {
 
                     ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.rel, new HistoryFragment());
@@ -120,20 +140,14 @@ public class MainActivity extends AppCompatActivity
                     view = LayoutInflater.from(
                             getBaseContext()).inflate(R.layout.dummy, null, false);
 
-                }
-                else if(position==1)
-                {
-
+                } else if (position == 1) {
                     ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.rel2, new RecyclerViewFragment().newInstance());
                     ft.commit();
-
                     view = LayoutInflater.from(
                             getBaseContext()).inflate(R.layout.dummy2, null, false);
 
-                }
-                else if(position==2)
-                {
+                } else if (position == 2) {
 
                     ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.rel3, new RecyclerViewFragment1().newInstance());
@@ -142,9 +156,7 @@ public class MainActivity extends AppCompatActivity
                     view = LayoutInflater.from(
                             getBaseContext()).inflate(R.layout.dummy3, null, false);
 
-                }
-                else if(position==3)
-                {
+                } else if (position == 3) {
                     ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.rel1, new RecyclerViewFragment2().newInstance());
                     ft.commit();
@@ -152,9 +164,7 @@ public class MainActivity extends AppCompatActivity
                     view = LayoutInflater.from(
                             getBaseContext()).inflate(R.layout.dummy1, null, false);
 
-                }
-                else
-                {
+                } else {
                     view = LayoutInflater.from(
                             getBaseContext()).inflate(R.layout.recycler_for_feed, null, false);
                 }
@@ -174,7 +184,7 @@ public class MainActivity extends AppCompatActivity
                         Color.parseColor(colors[0]))
                         //.selectedIcon(getResources().getDrawable(R.drawable.ic_sixth))
                         .title("History")
-                        .badgeTitle("1")
+                        .badgeTitle("8")
                         .build()
         );
         models.add(
@@ -183,7 +193,7 @@ public class MainActivity extends AppCompatActivity
                         Color.parseColor(colors[1]))
 //                        .selectedIcon(getResources().getDrawable(R.drawable.ic_eighth))
                         .title("@ AIST")
-                        .badgeTitle("2")
+                        .badgeTitle("AIST")
                         .build()
         );
         models.add(
@@ -192,7 +202,7 @@ public class MainActivity extends AppCompatActivity
                         Color.parseColor(colors[2]))
 //                        .selectedIcon(getResources().getDrawable(R.drawable.ic_eighth))
                         .title("@ IITD")
-                        .badgeTitle("3")
+                        .badgeTitle("IITD")
                         .build()
         );
         models.add(
@@ -201,12 +211,17 @@ public class MainActivity extends AppCompatActivity
                         Color.parseColor(colors[3]))
 //                        .selectedIcon(getResources().getDrawable(R.drawable.ic_eighth))
                         .title("Programs")
-                        .badgeTitle("4")
+                        .badgeTitle("11")
                         .build()
         );
 
         navigationTabBar.setModels(models);
-        navigationTabBar.setViewPager(viewPager, -1);
+        if (pos != 0) {
+            navigationTabBar.setViewPager(viewPager,pos);
+        } else
+        {
+            navigationTabBar.setViewPager(viewPager,-1);
+        }
         navigationTabBar.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(final int position, final float positionOffset, final int positionOffsetPixels) {
@@ -260,7 +275,7 @@ public class MainActivity extends AppCompatActivity
                 .build();
 
         mAuth = FirebaseAuth.getInstance();
-
+            //Qwertyuiop //password
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             // Name, email address, and profile photo Url
@@ -290,7 +305,7 @@ public class MainActivity extends AppCompatActivity
             try {
                 if (user.isAnonymous()) {
                     nav_user.setText("Welcome to DAILAB");
-                    nav_email.setText("DBT & AIST have established a new joint research laboratory, named DBT-AIST International Laboratory for Advanced Biomedicine (DAILAB) at AIST Tsukuba and RCB, India.");
+                    nav_email.setText("DBT-AIST International Laboratory for Advanced Biomedicine");
                 } else {
                     nav_user.setText(name);
                     nav_email.setText(email);
@@ -342,15 +357,15 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             if (doubleBackToExitPressedOnce) {
-                Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.addCategory(Intent.CATEGORY_HOME);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                finish();
-            }
-            else {
-                this.doubleBackToExitPressedOnce = true;
-                Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+//                Intent intent = new Intent(Intent.ACTION_MAIN);
+//                intent.addCategory(Intent.CATEGORY_HOME);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                startActivity(intent);
+//                finish();
+//            }
+//            else {
+//                this.doubleBackToExitPressedOnce = true;
+//                Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
             }
 
             new Handler().postDelayed(new Runnable() {

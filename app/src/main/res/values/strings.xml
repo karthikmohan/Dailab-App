@@ -25,4 +25,18 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="compose_shortcut_short_label1">Dailab Chat Room</string>
+    <string name="compose_shortcut_long_label1">Ask your Questions.</string>
+
+    <string name="compose_shortcut_short_label2">Dailab @ AIST</string>
+    <string name="compose_shortcut_long_label2">Dailab @ AIST</string>
+
+    <string name="compose_shortcut_short_label3">Dailab @ IITD</string>
+    <string name="compose_shortcut_long_label3">Dailab @ IITD</string>
+
+
+    <string name="compose_shortcut_short_label4">Programs</string>
+    <string name="compose_shortcut_long_label4">Dailab Programs</string>
+    <string name="compose_disabled_message1">Disabled</string>
 </resources>

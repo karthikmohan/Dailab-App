@@ -1,0 +1,293 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:shortcutId="compose4"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_send"
+        android:shortcutShortLabel="@string/compose_shortcut_short_label1"
+        android:shortcutLongLabel="@string/compose_shortcut_long_label1"
+        android:shortcutDisabledMessage="@string/compose_disabled_message1">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.iitd.dailab"
+            android:targetClass="com.iitd.dailab.Fragment.CoachFragment" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+
+    </shortcut>
+    <shortcut
+        android:shortcutId="compose3"
+        android:enabled="true"
+        android:icon="@drawable/ic_fourth"
+        android:shortcutShortLabel="@string/compose_shortcut_short_label4"
+        android:shortcutLongLabel="@string/compose_shortcut_long_label4"
+        android:shortcutDisabledMessage="@string/compose_disabled_message1">
+        <intent
+            android:action="MainActivity@Programs"
+            android:targetPackage="com.iitd.dailab"
+            android:targetClass="com.iitd.dailab.MainActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+
+    </shortcut>
+    <shortcut
+        android:shortcutId="compose2"
+        android:enabled="true"
+        android:icon="@drawable/ic_fifth"
+        android:shortcutShortLabel="@string/compose_shortcut_short_label3"
+        android:shortcutLongLabel="@string/compose_shortcut_long_label3"
+        android:shortcutDisabledMessage="@string/compose_disabled_message1">
+        <intent
+            android:action="MainActivity@IITD"
+            android:targetPackage="com.iitd.dailab"
+            android:targetClass="com.iitd.dailab.MainActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="compose1"
+        android:enabled="true"
+        android:icon="@drawable/ic_third"
+        android:shortcutShortLabel="@string/compose_shortcut_short_label2"
+        android:shortcutLongLabel="@string/compose_shortcut_long_label2"
+        android:shortcutDisabledMessage="@string/compose_disabled_message1">
+        <intent
+            android:action="MainActivity@AIST"
+            android:targetPackage="com.iitd.dailab"
+            android:targetClass="com.iitd.dailab.MainActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.conversation" />
+
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>
+
+<!--
+<categories android:name="StyledFontLayoutTest"/>
+        <categories android:name="TiltedScreenManufacturer_Read_Only"/>
+        <categories android:name="Administrator"/>
+        <categories android:function="Open"/>
+
+        CUSTOM_NAME.equals(getIntent().getAction());
+        com.your .packageName.customName;
+        getFragmentManager();
+        getSupportFragmentManager();
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new LanguageSelectorFragment()).commit();
+        /apply();
+        /xmlns:app="http://schemas.android.com/apk/res-auto"
+        String resolveTypeIfNeeded (ContentResolver resolver)
+        {
+            ResolveLatency(MIME, null);
+        }
+        a=fontLayoutTest();
+        b=null;
+        if(returnedBroadcast(a!=b)
+        {
+        latencyLevel(50ms, 500ms, 5000ms);
+        timeoutTime: 120000ms;
+        )
+
+        JobA : responseTimeSet=100ms;
+        JobB : responseTimeSet=300ms;
+        JobC : responseTimeSet=400ms;
+
+        if(Deadlock_avoid != success)
+        {
+             JobA : restart();
+             if(!JobA==restart())
+             {
+                JobA : forceRestart();
+             }
+             else{
+                JobB : restart();
+
+                JobC : null;
+        }
+        else{
+            continue();
+            }
+         a = responseTime (JobA);
+         b = responseTime (JobB);
+
+        //Check Again
+        StreamCheck = returnedStream.getId();
+
+        if(returnedBroadcast(a!=b))
+        {
+            latencyLevel(0ms);
+            timeoutTime: 100ms;
+        }
+
+        ActivityName = .MainActivity;
+        FragmentName = Fragment.CoachFragment;
+
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        {
+                //+1
+                        enter();
+
+        }
+        BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
+        title = bReader.readLine();
+
+        retry();
+
+        void retry()
+        {
+            if(DeadLock_avoid == success)
+                {break;}
+            else
+                {continue();}
+        }
+
+         do{
+
+         if(a=b=c)
+            {
+                exit();
+            };
+            liveBroadCast
+        if(JobA==successful())
+        {
+            proceed(JobB);
+        }
+        if(JobB==successful())
+        {
+            proceed(JobC);
+        }
+        if(JobC==successful())
+        {
+               List,String> scopes = List.new ArrayList("Server Response Time");
+               scopes = a!, b!, c!;
+               System.out.print("Please enter a stream title: a!,b!,c!");
+               println(scopes);
+               hex factor = scopes;
+               Post (factor);
+
+               adWebRTC = HighBandwidth();
+               polar.web!=low.latency(4);
+               low.latency.categories(High, Moderate, Low, null);
+                if(adWebRTC = opn.latency);
+                    {
+                            broadcast.setKind = true;
+                            broadcast.setKind(Live/Scheduled/Recorded);
+
+                     }
+                     retry();
+
+        }
+        int Flag_Grant_Read_Uri_Permission;
+        Flag_Grant_Read_Uri_Permission = 1;
+
+
+        ResponseTime = ReadOnly();
+
+          // Construct and execute a request to bind the new broadcast
+          broadcast.bind(returnedBroadcast.getId(), "id,contentDetails");
+
+          //+1
+                        halt.binder(107);
+          //+2
+                        halt.JobA;
+          //+2.1
+                        halt.JobB;
+          //+2.2
+                        halt.JobC;
+          //+2.3
+                        halt.JobD;
+          //+3
+                        exit();
+          //+4
+                        end();
+          //+5
+                        result();
+          //+6
+                        println();
+                        trapQuestion();
+
+                        4*5 grid with 2 external options;
+                        grid size manipulative.
+
+                        !y or n! (liveStream = new LiveStream);
+                        if(!y){
+                            true;
+                        }
+                        else
+                        {   //concurrency control
+                            false;
+                            }
+                        ******end of file*****
+
+           Rebase master to original master file,
+           and to do that remove the stream buffer first;
+        if(juku){
+            let net = 0;
+            net = 11;
+                cafe&&star==1;
+                net++;
+        }
+        if(researchOutcomes)
+        {
+            net = 10;
+                cafe&&star==2;
+        }
+        if(cafe)
+        {
+            net= 14;
+            cafe&&star==3;
+            }
+        if(star)
+        {
+            net=13;
+                cafe&&star==4;
+            }
+            normalize_data==2;
+
+           Debug the block and the xmlns:app="http://schemas.android.com/apk/res-auto"
+           is set to default value;
+
+        default value: 5*10^6
+
+        //default value can be changed to 3 or 4 according to the req of tabs.
+        //Currently it is 4 tabs and other details are mentioned below.**
+
+            <intent
+        android:action="com.your.package_name.custom.name"
+        android:targetPackage="com.example"
+        android:targetClass="com.example.Activity" />
+        setData(data.normalize())
+
+        intent.setData(data.normalize());
+
+        normalize data with standard function structure.
+                Co-op between the same function and concurrency control
+
+        normalize and house the variables under the same constant.
+
+        ** 4 tabs, 5 navigation drawer tabs, one logout button, 30 activities and 92 res files (including .xml);
+
+        AppMeasurementReceiver (APM);
+        This takes of the DataUsage being held in the app and is noticeable from the app menu.
+
+        APM.setData(data.normalize());
+        APM will take value from intent mentioned above through the APM receiver.
+
+        Intent setDataAndTypeAndNormalize(Uri data, String type);
+        setDataAndType(data.normalize(), Intent.normalizeMimeType(type))
+
+        if data: Uri
+        and type: String
+
+
+         -->

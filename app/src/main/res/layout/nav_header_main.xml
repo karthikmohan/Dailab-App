@@ -15,7 +15,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -45,7 +44,8 @@
             android:visibility="gone" />
 
     </LinearLayout>
-        <TextView
+
+    <TextView
             android:id="@+id/name_of_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             android:id="@+id/email_of_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DBT and AIST have established a new joint research laboratory, named DBT-AIST International Laboratory for Advanced Biomedicine (DAILAB) at AIST Tsukuba and RCB, India."
+            android:text="DBT-AIST International Laboratory for Advanced Biomedicine"
             android:textSize="14sp" />
 
     </LinearLayout>

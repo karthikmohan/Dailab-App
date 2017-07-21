@@ -24,6 +24,7 @@ import android.widget.TextView;
 import com.iitd.dailab.Model.Movie;
 import com.iitd.dailab.R;
 
+import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -371,8 +372,6 @@ public class TestRecyclerViewAdapter extends RecyclerView.Adapter<TestRecyclerVi
                                 LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(Math.round(imageWidthInPX),
                                         Math.round(imageWidthInPX * (float)icon.getHeight() / (float)icon.getWidth()));
                                 image.setLayoutParams(layoutParams);
-
-
                             }
                         });
                     }

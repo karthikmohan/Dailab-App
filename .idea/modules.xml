@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DAILAB.iml" filepath="$PROJECT_DIR$/DAILAB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DAILAB_New.iml" filepath="$PROJECT_DIR$/DAILAB_New.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
